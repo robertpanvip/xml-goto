@@ -12,26 +12,16 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-<h3>🎯 Core Functionality</h3>
-DOM Attribute Navigation enables precise jump-to-definition for HTML attributes and tag names in XML/Vue template files (including .vue Single-File Components). Supports Ctrl+Click to navigate directly to the corresponding DOM type declarations in lib.dom.d.ts.
+DOM Attribute Navigation provides precise jump-to-definition functionality for HTML attributes and tag names in both standard XML files and Vue Single-File Component (.vue) templates. With Ctrl+Click, developers can directly navigate to the corresponding DOM type declarations in lib.dom.d.ts, including HTMLElement properties, GlobalEventHandlers event definitions, and HTML element interface declarations.
 
-<h3>✨ Supported Scenarios</h3>
-<ul>
-  <li><strong>Plain HTML Attributes</strong>: e.g., <code>&lt;div title="xxx"&gt;</code> → Jumps to <code>HTMLElement.title: string</code></li>
-  <li><strong>Bound Attributes (Vue)</strong>: e.g., <code>&lt;div :title="xxx"&gt;</code> → Jumps to <code>HTMLElement.title: string</code></li>
-  <li><strong>Special Attribute Mapping</strong>: e.g., <code>class/:class</code> → Automatically maps to <code>Element.className: string</code></li>
-  <li><strong>Event Bindings</strong>: e.g., <code>&lt;div onclick=""&gt;</code> (XML) / <code>&lt;div @click=""&gt;</code> (Vue) → Jumps to <code>GlobalEventHandlers.onclick</code></li>
-  <li><strong>Tag Name Navigation</strong>: Ctrl+Click on <code>&lt;div&gt;</code> (XML/Vue) → Jumps to <code>HTMLDivElement</code> interface</li>
-  <li><strong>Deep Inheritance Chain</strong>: Resolves full DOM inheritance (HTMLDivElement → HTMLElement → Element → GlobalEventHandlers, etc.)</li>
-</ul>
+Key features include:
+- Universal support for XML and Vue template files, no extra configuration required
+- Automatic normalization of syntax (Vue-specific :/v-bind, @/v-on, modifiers like .stop/.once included)
+- Precise positioning to the exact line of attribute/interface definition with full TypeScript type signature display
+- Full resolution of DOM inheritance chains (HTMLDivElement → HTMLElement → Element → GlobalEventHandlers, etc.)
+- Special mapping for common attributes (e.g., class → className) across XML and Vue contexts
 
-<h3>🚀 Key Features</h3>
-<ul>
-  <li>✅ Universal Support: Works for both standard XML files and Vue .vue template sections</li>
-  <li>✅ Precise Positioning: Directly navigates to the exact line of attribute definition with full TypeScript type signature</li>
-  <li>✅ Syntax Compatibility: Auto-normalizes Vue-specific syntax (:/v-bind, @/v-on, modifiers like .stop/.once) while maintaining XML native support</li>
-  <li>✅ Zero Configuration: Ready to use immediately after installation, no extra setup required</li>
-</ul>
+This plugin enhances development efficiency by enabling quick access to native DOM type definitions, supporting both traditional XML development and modern Vue-based projects with zero setup overhead.
 ]]></description>
 
     <!-- Product and plugin compatibility requirements.

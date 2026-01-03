@@ -1,1 +1,1 @@
-rootProject.name = "DashStyle"
+rootProject.name = "xml-goto"
